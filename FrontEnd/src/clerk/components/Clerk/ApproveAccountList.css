@@ -1,0 +1,23 @@
+.approv-transaction-list-container {
+  /* background-color: black; */
+  color: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.approv-transaction-list-title {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  margin-bottom: 1.2rem;
+}
+
+.appro-approve-btn {
+  /* background-color: #e87341; */
+
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}

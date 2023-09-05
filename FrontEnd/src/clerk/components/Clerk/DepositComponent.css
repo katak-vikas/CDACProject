@@ -1,0 +1,49 @@
+.clk-deposit-form-container {
+  background-color: #bcbcbc;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.clk-deposit-form-container h2 {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.clk-deposit-form-container input[type="text"],
+.clk-deposit-form-container input[type="number"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #270a0a;
+  border-radius: 14px;
+}
+
+.clk-custom-button {
+  background-color: #007bff;
+  color: black;
+  outline: none;
+  margin-top: 12px;
+  box-shadow: 0px 0px 20px #999;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  transition: all 250ms ease-in-out;
+}
+
+.clk-custom-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 20px #9c9c9c;
+}
+
+.response-container {
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+}

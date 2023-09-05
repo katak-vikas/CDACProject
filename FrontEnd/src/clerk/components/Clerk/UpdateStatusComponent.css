@@ -1,0 +1,33 @@
+/* TransactionList.css */
+
+.status-transaction-list-container {
+  /* background-color: black; */
+  color: #222;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.status-transaction-list-title {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  margin-bottom: 1.2rem;
+}
+
+.cus-btn {
+  background-color: #ff8c00;
+  outline: none;
+  border: none;
+  padding: 0.75rem;
+  min-width: 150px;
+}
+
+.status-approve-btn {
+  /* background-color: #e87341; */
+
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}

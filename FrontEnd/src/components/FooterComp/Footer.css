@@ -1,0 +1,58 @@
+/* FooterComponent.css */
+.dark-footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 40px 0;
+}
+
+.dark-footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.dark-footer p {
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff8c00;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dark-footer {
+    text-align: center;
+  }
+
+  .dark-footer h2 {
+    margin-top: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .footer-links li {
+    margin-right: 15px;
+  }
+}

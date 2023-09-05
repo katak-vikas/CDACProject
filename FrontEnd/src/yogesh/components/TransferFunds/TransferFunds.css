@@ -1,0 +1,100 @@
+/* TransferFunds.css */
+
+.transfer-form-container {
+  background-color: #dfdfdf;
+  color: #222;
+  padding: 1.2rem;
+  border-radius: 0.9rem;
+  height: 100vh;
+  /* margin-top: 1.2rem; */
+}
+
+.transfer-form-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.transfer-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.transfer-button:hover {
+  background-color: #0056b3;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.side-by-side {
+  display: flex;
+  gap: 12rem;
+}
+
+.large-field {
+  margin-top: 8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.large-field label {
+}
+
+.large-field select {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.horizontal-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-buttons label {
+  margin-right: 20px;
+}
+
+.radio-buttons input {
+  margin-right: 5px;
+}
+
+span {
+  font-weight: 600;
+}

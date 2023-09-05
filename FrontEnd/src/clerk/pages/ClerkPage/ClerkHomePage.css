@@ -1,0 +1,90 @@
+/* Updated HomePage2.css */
+
+.clrk-homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.clrk-header {
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 1.1rem;
+  text-align: left;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.clrk-header .title {
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.clrk-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.1rem; /* Hide content overflow */
+}
+
+.clrk-sidebar {
+  flex: 1;
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 1.2rem;
+  border-radius: 0.95rem;
+  margin-right: 1.1rem;
+  box-shadow: 12px 5px 30px #333;
+  display: flex;
+  /* position: sticky; */
+  flex-direction: column;
+}
+
+.sidebar-button {
+  cursor: pointer;
+  padding: 0.95rem;
+  margin-bottom: 0.95rem;
+  border-radius: 0.45rem;
+  transition: all 200ms ease-in-out;
+  color: #dfdfdf;
+  font-weight: 400;
+}
+
+.sidebar-button:hover {
+  background-color: #ff9100f9;
+  color: #333;
+  transform: scale(1.05);
+  /* font-weight: bold; */
+}
+
+.sidebar-button.active {
+  background-color: #ff8c00;
+  color: #333;
+  font-weight: 700;
+}
+
+.clrk-main-content {
+  flex: 3;
+  background-color: #dfdfdf;
+  color: #292c35;
+  padding: 1.1rem;
+  border-radius: 0.95rem;
+  transition: opacity 200ms ease-in-out;
+  box-shadow: 0px 5px 20px #666;
+  /* overflow-y: hidden; */
+  /* Add scrollbar for content overflow */
+  /* overflow-y: scroll; */
+}
+
+.clrk-main-content.active {
+  opacity: 1;
+}
+
+.footer {
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #dfdfdf;
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2);
+}

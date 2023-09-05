@@ -1,0 +1,126 @@
+import React, { useState } from "react";
+import { useTrail, animated } from "react-spring";
+// import "./TransactionList.css"; // Import the CSS file for styling
+import TransactionService from "../../service/TransactionService";
+
+const TransactionList = ({ accounts }) => {
+  const [selectedAccountNumber, setSelectedAccountNumber] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [startValue, setStartValue] = useState("");
+  const [endValue, setEndValue] = useState("");
+  const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleAccountSelect = (event) => {
+    setSelectedAccountNumber(event.target.value);
+  };
+
+  const handleFetchTransactions = async () => {
+    setLoading(true); // Start loading
+
+    try {
+      const queryParams = {
+        accountNumber: selectedAccountNumber,
+        startDate: startDate,
+        endDate: endDate,
+        startValue: parseFloat(startValue),
+        endValue: parseFloat(endValue),
+      };
+
+      const response = await TransactionService.getAllTransactions(queryParams);
+
+      setTransactions(response.data);
+    } catch (error) {
+      console.error("Error fetching transactions details:", error);
+    } finally {
+      setLoading(false); // Stop loading
+    }
+  };
+  const trail = useTrail(transactions.length, {
+    opacity: 1,
+    transform: "translateY(0px)",
+    from: { opacity: 0, transform: "translateY(20px)" },
+    config: { mass: 1, tension: 500, friction: 40 },
+  });
+
+  return (
+    <div className="transaction-list-container">
+      <h2 className="transaction-list-title">Transaction List</h2>
+      <div className="filters-container">
+        <div className="account-select">
+          <label htmlFor="accountSelect">Select Account: </label>
+          <select
+            id="accountSelect"
+            value={selectedAccountNumber}
+            onChange={handleAccountSelect}
+          >
+            <option value="">All Accounts</option>
+            {accounts.map((account) => (
+              <option key={account.accountNumber} value={account.accountNumber}>
+                {account.accountNumber}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="filter-inputs">
+          <input
+            type="date"
+            placeholder="Start Date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+          />
+          <input
+            type="date"
+            placeholder="End Date"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Start Value"
+            value={startValue}
+            onChange={(e) => setStartValue(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="End Value"
+            value={endValue}
+            onChange={(e) => setEndValue(e.target.value)}
+          />
+          <button onClick={handleFetchTransactions}>Fetch Transactions</button>
+        </div>
+      </div>
+      <table className="transaction-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Type</th>
+            <th>Date/Time</th>
+            <th>From Account</th>
+            <th>To Account</th>
+            <th>Amount</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          {trail.map((styles, index) => (
+            <animated.tr key={transactions[index].transactionId} style={styles}>
+              <td>{transactions[index].transactionId}</td>
+              <td>{transactions[index].transactionStatus}</td>
+              <td>{transactions[index].transactionType}</td>
+              <td>{transactions[index].transactionDateTime}</td>
+              <td>{transactions[index].fromAccountNumber}</td>
+              <td>{transactions[index].toAccountNumber}</td>
+              <td>{transactions[index].amount}</td>
+              <td>{transactions[index].transactionMode}</td>
+            </animated.tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default TransactionList;

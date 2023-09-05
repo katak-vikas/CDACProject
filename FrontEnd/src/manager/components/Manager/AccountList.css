@@ -1,0 +1,38 @@
+/* TransactionList.css */
+
+.manage-transaction-list-container {
+  background-color: #f0f6f9;
+  color: #222;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.manage-transaction-list-title {
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+  text-align: center; /* Center-align the title */
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  /* text-decoration: underline; */
+}
+
+.manage-account-select {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 1.4rem;
+}
+
+.manage-account-select label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.manage-account-select select {
+  padding: 0.6rem;
+  max-width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #333;
+}

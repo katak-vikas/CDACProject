@@ -1,0 +1,95 @@
+/* Updated HomePage2.css */
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.homepage-container .header {
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 1.1rem;
+  text-align: left;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.homepage-container .profile-link {
+  color: #f2921ee4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.homepage-container .content {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.1rem;
+  /* overflow: hidden; */
+}
+
+.homepage-container .sidebar {
+  flex: 1;
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 1.2rem;
+  border-radius: 0.95rem;
+  margin-right: 1.1rem;
+  box-shadow: 12px 5px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: sticky;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+}
+
+.homepage-container .sidebar-button {
+  cursor: pointer;
+  padding: 0.95rem;
+  margin-bottom: 0.95rem;
+  border-radius: 0.45rem;
+  transition: all 200ms ease-in-out;
+  color: #dfdfdf;
+  font-weight: 400;
+}
+
+.homepage-container .sidebar-button:hover {
+  background-color: #ff9100f9;
+  color: #333;
+  transform: scale(1.05);
+  /* font-weight: bold; */
+}
+
+.homepage-container .sidebar-button.active {
+  background-color: #ff8c00;
+  color: #333;
+  font-weight: 700;
+}
+
+.homepage-container .main-content {
+  flex: 3;
+  background-color: #dfdfdf;
+  color: #292c35;
+  padding: 1.1rem;
+  border-radius: 0.95rem;
+  transition: opacity 0.3s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  /* overflow-y: hidden; */
+  /* Add scrollbar for content overflow */
+  /* overflow-y: scroll; */
+}
+
+.homepage-container .main-content.active {
+  opacity: 1;
+}
+
+.homepage-container .footer {
+  background-color: #292c35;
+  color: #dfdfdf;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #dfdfdf;
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add more animations or transitions as desired */

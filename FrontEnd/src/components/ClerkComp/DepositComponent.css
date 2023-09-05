@@ -1,0 +1,45 @@
+/* DepositComponent.css */
+
+.deposit-form-container {
+    background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #270a0a;
+    border-radius: 3px;
+  }
+  
+  .custom-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .response-container {
+    margin-top: 10px;
+  }
+  
+  .error {
+    color: red;
+  }
+  

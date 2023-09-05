@@ -1,0 +1,51 @@
+TransactionList.css .transaction-list-container {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.transaction-list-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center; /* Center-align the title */
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 8px;
+  border-bottom: 1px solid white;
+  text-align: left; /* Left-align the content */
+}
+
+.transaction-table th {
+  /* No need to set text-align: left; for headers, as it's already the default */
+}
+
+.transaction-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.account-select {
+  margin-bottom: 20px;
+}
+
+.account-select label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.account-select select {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
